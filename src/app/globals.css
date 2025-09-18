@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Roboto", "Inter", "system-ui", sans-serif;
+
+  /* Colors */
+  --color-primary-500: #1b9876;
+  --color-dark-500: #242424;
+  --color-dark-400: #696F79;
+
+  
+
+  /* Spacing */
+  --spacing-18: 4.5rem;
+  --spacing-88: 22rem;
+}
+
+
+@layer components {
+  .container {
+    @apply mx-auto w-full px-3 sm:max-w-[600px] md:max-w-[740px] lg:max-w-[990px] xl:max-w-[1216px];
+  }
+  /* 2xl:max-w-[1366px] */
+}
