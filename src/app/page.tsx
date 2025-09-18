@@ -1,7 +1,8 @@
 import React from "react";
+import Login from "./login/page";
 
 const Home = () => {
-  return <div className="text-3xl bg-primary-500">Home</div>;
+  return <Login />;
 };
 
 export default Home;
