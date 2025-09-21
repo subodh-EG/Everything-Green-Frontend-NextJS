@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../assets/images/eg.webp";
+import logo from "@/assets/images/eg.webp";
 import Image from "next/image";
 const Assessment = () => {
   return (

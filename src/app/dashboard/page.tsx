@@ -21,40 +21,40 @@ const tableData = [
     emissions: "50kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 124",
+    cost: "8200 USD",
+    conversions: "210",
+    emissions: "52kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 125",
+    cost: "7900 USD",
+    conversions: "195",
+    emissions: "48kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 126",
+    cost: "8500 USD",
+    conversions: "230",
+    emissions: "55kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 127",
+    cost: "8100 USD",
+    conversions: "205",
+    emissions: "51kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 128",
+    cost: "8700 USD",
+    conversions: "240",
+    emissions: "57kgCO2e",
   },
   {
-    channel: "Paid campaign 123",
-    cost: "8000 USD",
-    conversions: "200",
-    emissions: "50kgCO2e",
+    channel: "Paid campaign 129",
+    cost: "7600 USD",
+    conversions: "185",
+    emissions: "47kgCO2e",
   },
 ];
 
@@ -228,7 +228,6 @@ const UserPage = () => {
             </table>
           </div>
         </div>
-
       </section>
     </DashboardLayout>
   );
