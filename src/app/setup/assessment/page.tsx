@@ -17,7 +17,6 @@ const Assessment = () => {
   const marketCapOptions = [
     { value: "Mega-Cap ($200B+)", label: "Mega-Cap ($200B+)" },
     { value: "Large-Cap ($10B - $200B)", label: "Large-Cap ($10B - $200B)" },
-    ,
     { value: "Mid-Cap ($2B - $10B)", label: "Mid-Cap ($2B - $10B)" },
     { value: "Small-Cap ($250M - $2B)", label: "Small-Cap ($250M - $2B)" },
     { value: "Micro-Cap (< $250M)", label: "Micro-Cap (< $250M)" },
