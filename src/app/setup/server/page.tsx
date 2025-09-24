@@ -1,25 +1,25 @@
-"use client";
-import React, { useState } from "react";
-import logo from "../../../assets/images/eg.webp";
-import Image from "next/image";
+'use client';
+import React, { useState } from 'react';
+import Image from 'next/image';
 
-import cloud from "../../../assets/images/setup/cloud.webp";
-import google from "../../../assets/images/setup/google.webp";
-import analytics from "../../../assets/images/setup/analytics.webp";
+import logo from '../../../assets/images/eg.webp';
+import cloud from '../../../assets/images/setup/cloud.webp';
+import google from '../../../assets/images/setup/google.webp';
+import analytics from '../../../assets/images/setup/analytics.webp';
 
 const services = [
-  { name: " Google Analytics", image: analytics },
-  { name: " Google Search Console", image: google },
-  { name: " Google Cloud", image: cloud },
+  { name: ' Google Analytics', image: analytics },
+  { name: ' Google Search Console', image: google },
+  { name: ' Google Cloud', image: cloud },
 ];
 
 const Server = () => {
-  const [selectedServer, setSelectedServer] = useState("");
+  const [selectedServer, setSelectedServer] = useState('');
 
   return (
     <section className="flex text-dark-500 container">
       <div
-        style={{ boxShadow: "4px 0 8px rgba(0, 0, 0, 0.1)" }}
+        style={{ boxShadow: '4px 0 8px rgba(0, 0, 0, 0.1)' }}
         className="basis-3/4 min-h-[100vh]  "
       >
         <h2 className="mt-32 font-bold text-3xl">Tell us about your Website</h2>
@@ -49,7 +49,7 @@ const Server = () => {
                   name="server"
                   value="third-party"
                   className="accent-primary-500 w-4 h-4"
-                  checked={selectedServer === "third-party"}
+                  checked={selectedServer === 'third-party'}
                   onChange={(e) => setSelectedServer(e.target.value)}
                 />
                 <label
@@ -68,7 +68,7 @@ const Server = () => {
                   name="server"
                   value="in-house"
                   className="accent-primary-500 w-4 h-4"
-                  checked={selectedServer === "in-house"}
+                  checked={selectedServer === 'in-house'}
                   onChange={(e) => setSelectedServer(e.target.value)}
                 />
                 <label
@@ -105,7 +105,7 @@ const Server = () => {
                   <div className="max-h-[50px]">
                     <Image
                       src={service.image}
-                      className={`h-full ${index == 2 ? "w-full" : ""} `}
+                      className={`h-full ${index == 2 ? 'w-full' : ''} `}
                       alt={service.name}
                     ></Image>
                   </div>
@@ -123,7 +123,7 @@ const Server = () => {
                   type="button"
                   className="py-3 px-11 bg-primary-500 text-white font-medium rounded-md cursor-pointer"
                 >
-                  {" "}
+                  {' '}
                   Continue
                 </button>
               </div>

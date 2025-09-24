@@ -1,9 +1,10 @@
-import React from 'react'
-import logo from "../../assets/images/eg.webp";
-import tree from "../../assets/images/trees.webp";
-import Image from "next/image";
-import { FcGoogle } from "react-icons/fc";
+import React from 'react';
+import logo from '../../assets/images/eg.webp';
+import tree from '../../assets/images/trees.webp';
+import Image from 'next/image';
 import Link from 'next/link';
+import { FcGoogle } from 'react-icons/fc';
+
 const Signup = () => {
   return (
     <section className="container text-dark-500 ">
@@ -16,8 +17,6 @@ const Signup = () => {
 
       <div className="flex items-center justify-between">
         <h2 className="font-bold text-3xl ">Sign up</h2>
-
-        <div></div>
       </div>
 
       {/* form*/}
@@ -26,7 +25,7 @@ const Signup = () => {
         <p className="font-light">
           Join us on the journey towards a sustainable web by
           <br className="max-lg:hidden" />
-          Sign up now{" "}
+          Sign up now{' '}
         </p>
 
         <div className="flex justify-between mt-10">
@@ -79,13 +78,13 @@ const Signup = () => {
                   type="submit"
                   className="bg-primary-500 py-5 text-white w-[100%] rounded-md mt-10 cursor-pointer"
                 >
-                  {" "}
+                  {' '}
                   Register Account
                 </button>
               </div>
 
               <div className="my-8 text-dark-400 flex gap-3 items-center">
-                <hr className="text-dark-400 w-full" /> <p>Or</p>{" "}
+                <hr className="text-dark-400 w-full" /> <p>Or</p>{' '}
                 <hr className="w-full" />
               </div>
 
@@ -101,7 +100,9 @@ const Signup = () => {
               <div className="w-[100%]  mt-6">
                 <p className="text-center">
                   <span className="text-dark-400">Already an account ? </span>
-                  <Link href={"/login"} className='font-medium'>Login here</Link>
+                  <Link href={'/login'} className="font-medium">
+                    Login here
+                  </Link>
                 </p>
               </div>
             </form>
@@ -119,6 +120,6 @@ const Signup = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Signup
+export default Signup;

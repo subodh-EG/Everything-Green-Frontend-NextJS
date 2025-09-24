@@ -1,9 +1,10 @@
-import React from "react";
-import logo from "../../assets/images/eg.webp";
-import tree from "../../assets/images/trees.webp";
-import Image from "next/image";
-import { FcGoogle } from "react-icons/fc";
-import Link from "next/link";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import logo from '../../assets/images/eg.webp';
+import tree from '../../assets/images/trees.webp';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
   return (
@@ -30,7 +31,7 @@ const Login = () => {
         <p className="font-medium">
           Join us on the journey towards a sustainable web by login
           <br className="max-lg:hidden" />
-          now{" "}
+          now{' '}
         </p>
 
         <div className="flex justify-between mt-10">
@@ -74,13 +75,13 @@ const Login = () => {
                   type="submit"
                   className="bg-primary-500 py-5 text-white w-[100%] rounded-md mt-10"
                 >
-                  {" "}
+                  {' '}
                   Login
                 </button>
               </div>
 
               <div className="my-8 text-dark-400 flex gap-3 items-center">
-                <hr className="text-dark-400 w-full" /> <p>Or</p>{" "}
+                <hr className="text-dark-400 w-full" /> <p>Or</p>{' '}
                 <hr className="w-full" />
               </div>
 
@@ -95,12 +96,10 @@ const Login = () => {
 
               <div className="w-[100%]  mt-6">
                 <p className="text-center">
-                  <span className="text-dark-400">Don’t have an account ? </span>
-
-                  <Link href={"/signup"}>
-
-                  Signup for free
-                  </Link>
+                  <span className="text-dark-400">
+                    Don’t have an account ?{' '}
+                  </span>
+                  <Link href={'/signup'}>Signup for free</Link>
                 </p>
               </div>
             </form>
@@ -117,7 +116,6 @@ const Login = () => {
         </div>
       </div>
     </section>
-    
   );
 };
 

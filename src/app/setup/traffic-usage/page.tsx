@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "@/assets/images/eg.webp";
 import Image from "next/image";
+
 const TraficUsage = () => {
   return (
     <section className="flex container">

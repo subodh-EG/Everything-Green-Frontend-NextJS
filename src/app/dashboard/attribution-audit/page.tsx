@@ -1,11 +1,11 @@
-import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import DateSelect from "@/components/dashboard/home/DateSelect";
-import UserBarDiagram from "@/components/dashboard/home/UserBarDigram";
-import React from "react";
-import { FaArrowRight } from "react-icons/fa";
-import { FiCheckCircle } from "react-icons/fi";
-import { IoMdRefresh } from "react-icons/io";
-import { LuMoveRight } from "react-icons/lu";
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
+import DateSelect from '@/components/dashboard/home/DateSelect';
+import UserBarDiagram from '@/components/dashboard/home/UserBarDigram';
+import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import { FiCheckCircle } from 'react-icons/fi';
+import { IoMdRefresh } from 'react-icons/io';
+import { LuMoveRight } from 'react-icons/lu';
 
 const AttributionAudit = () => {
   return (
@@ -144,7 +144,6 @@ const AttributionAudit = () => {
       {/* bar diagram */}
 
       <UserBarDiagram />
-
     </DashboardLayout>
   );
 };
