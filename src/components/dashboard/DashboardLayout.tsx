@@ -1,9 +1,9 @@
-"use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { FaReact, FaChevronDown } from "react-icons/fa";
-import { sidebarMenu } from "./SidebarMenu";
+'use client';
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { FaReact, FaChevronDown } from 'react-icons/fa';
+import { sidebarMenu } from './SidebarMenu';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   };
 
   const [openSubMenus, setOpenSubMenus] = useState<Record<string, boolean>>(
-    () => getInitialOpenMenus(pathname)
+    () => getInitialOpenMenus(pathname),
   );
 
   const toggleSubMenu = (title: string) => {
@@ -37,16 +37,11 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     <div className="flex h-screen">
       {/* Sidebar */}
       <aside className="w-64 bg-[#091e21] text-white p-4">
-        <h2 className="text-xl font-bold mb-6 flex items-center gap-2">
-          <FaReact className="text-cyan-400 animate-spin-slow" />
-          Dashboard
-        </h2>
-
         <nav>
           <ul className="space-y-2">
             {sidebarMenu.map((item) => {
               const isParentActive = item.children?.some(
-                (child) => pathname === child.path
+                (child) => pathname === child.path,
               );
               const isActive = pathname === item.path || isParentActive;
               const isOpen = openSubMenus[item.title];
@@ -59,8 +54,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                         onClick={() => toggleSubMenu(item.title)}
                         className={`flex items-center justify-between w-full px-3 py-2 rounded transition-colors duration-200 ${
                           isParentActive
-                            ? "bg-primary-500 text-white"
-                            : "hover:bg-primary-500"
+                            ? 'bg-primary-500 text-white'
+                            : 'hover:bg-primary-500'
                         }`}
                       >
                         <div className="flex items-center gap-2">
@@ -69,13 +64,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                         </div>
                         <FaChevronDown
                           className={`transition-transform duration-300 ${
-                            isOpen ? "rotate-180" : ""
+                            isOpen ? 'rotate-180' : ''
                           }`}
                         />
                       </button>
                       <ul
                         className={`pl-6 mt-1 space-y-1 text-sm overflow-hidden transition-all duration-300 ${
-                          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                       >
                         {item.children.map((child) => {
@@ -86,8 +81,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                                 href={child.path}
                                 className={`block px-2 py-1 rounded transition-colors duration-200 ${
                                   isChildActive
-                                    ? "bg-primary-500 text-white"
-                                    : "hover:bg-primary-500"
+                                    ? 'bg-primary-500 text-white'
+                                    : 'hover:bg-primary-500'
                                 }`}
                               >
                                 {child.title}
@@ -102,8 +97,8 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                       href={item.path!}
                       className={`flex items-center gap-2 px-3 py-2 rounded transition-colors duration-200 ${
                         isActive
-                          ? "bg-cyan-700 text-white"
-                          : "hover:bg-cyan-800"
+                          ? 'bg-primary-500 text-white'
+                          : 'hover:bg-primary-500'
                       }`}
                     >
                       {item.icon}

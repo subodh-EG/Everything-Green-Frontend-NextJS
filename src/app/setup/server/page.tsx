@@ -151,26 +151,26 @@ const Server = () => {
             </div>
           </div>
 
-          <div className="h-12 border-dark-400 border w-[1px] ml-2.5"></div>
+          <div className="h-12 border-[#828282] border w-[1px] ml-2.5"></div>
           <div className=" ">
             <div className="font-medium flex items-center gap-2">
-              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+              <div className="bg-[#828282] text-white rounded-full flex items-center justify-center h-6 w-6 ">
                 2{' '}
               </div>
-              <div>
+              <div className="text-[#828282]">
                 <p className="text-sm">Website Assessment</p>
                 <p className="text-xs">help it make it more sustainable</p>
               </div>
             </div>
           </div>
 
-          <div className="h-12 border-dark-400 border w-[1px] ml-2.5"></div>
+          <div className="h-12 border-[#828282] border w-[1px] ml-2.5"></div>
           <div className=" ">
             <div className="font-medium flex items-center gap-2">
-              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+              <div className="bg-[#828282] text-white rounded-full flex items-center justify-center h-6 w-6 ">
                 3
               </div>
-              <div>
+              <div className="text-[#828282]">
                 <p className="text-sm">Step title</p>
                 <p className="text-xs">Optional</p>
               </div>

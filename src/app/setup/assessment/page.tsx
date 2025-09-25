@@ -7,7 +7,6 @@ import Select from 'react-select';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
 import { customStyles } from '@/utils/CustomSelect';
-
 const Assessment = () => {
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
@@ -31,7 +30,6 @@ const Assessment = () => {
 
     { value: 'E-commerce', label: 'E-commerce' },
   ];
-
   return (
     <section className="flex container">
       <div
@@ -59,7 +57,11 @@ const Assessment = () => {
           Tell us more about your website so we can help you make it more
           sustainable
         </p>
-        <form action="" className="max-w-[45%] flex flex-col gap-6">
+        <form
+          action="
+        "
+          className="max-w-[45%] flex flex-col gap-6"
+        >
           <div className="mt-3">
             <label htmlFor="" className="font-medium">
               CMS*
@@ -114,9 +116,50 @@ const Assessment = () => {
         </form>
       </div>
 
-      <div className="basis-1/4 ">
+      {/* part 2 */}
+      <div className="basis-1/4  pl-3 ">
         <div className="flex justify-end mt-18">
           <Image src={logo} alt="everything green"></Image>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <div className=" mt-28">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                1
+              </div>
+              <div>
+                <p className="text-sm">Select Server</p>
+                <p className="text-xs">What is the server of your website</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-12 border-primary-500 border w-[1px] ml-2.5"></div>
+          <div className=" ">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                2{' '}
+              </div>
+              <div className="">
+                <p className="text-sm">Website Assessment</p>
+                <p className="text-xs">help it make it more sustainable</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-12 border-[#828282] border w-[1px] ml-2.5"></div>
+          <div className=" ">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-[#828282] text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                3
+              </div>
+              <div className="text-[#828282]">
+                <p className="text-sm">Step title</p>
+                <p className="text-xs">Optional</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

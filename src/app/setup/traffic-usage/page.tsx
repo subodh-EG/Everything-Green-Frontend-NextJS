@@ -98,9 +98,50 @@ const TraficUsage = () => {
           </div>
         </form>
       </div>
-      <div className="basis-1/4 ">
+      {/* part 2 */}
+      <div className="basis-1/4  pl-3 ">
         <div className="flex justify-end mt-18">
           <Image src={logo} alt="everything green"></Image>
+        </div>
+
+        <div className="flex flex-col gap-4">
+          <div className=" mt-28">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                1
+              </div>
+              <div>
+                <p className="text-sm">Select Server</p>
+                <p className="text-xs">What is the server of your website</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-12 border-primary-500 border w-[1px] ml-2.5"></div>
+          <div className=" ">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                2{' '}
+              </div>
+              <div className="">
+                <p className="text-sm">Website Assessment</p>
+                <p className="text-xs">help it make it more sustainable</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-12 border-primary-500 border w-[1px] ml-2.5"></div>
+          <div className=" ">
+            <div className="font-medium flex items-center gap-2">
+              <div className="bg-primary-500 text-white rounded-full flex items-center justify-center h-6 w-6 ">
+                3
+              </div>
+              <div className="">
+                <p className="text-sm">Step title</p>
+                <p className="text-xs">Optional</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
