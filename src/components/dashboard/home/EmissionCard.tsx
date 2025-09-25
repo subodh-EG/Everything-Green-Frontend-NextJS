@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import React from 'react'
-import { FaArrowTrendUp } from 'react-icons/fa6'
-import meter from "@/assets/images/dashboard/meter.webp"
+import React from 'react';
+import { FaArrowTrendUp } from 'react-icons/fa6';
+import meter from '@/assets/images/dashboard/meter.webp';
+
 const EmissionCard = () => {
   return (
     <div className="border-2 border-primary-500 px-4 py-8 rounded-md flex gap-5 bg-white">
@@ -20,6 +21,6 @@ const EmissionCard = () => {
       </div>
     </div>
   );
-}
+};
 
-export default EmissionCard
+export default EmissionCard;

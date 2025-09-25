@@ -6,6 +6,7 @@ import {
   FaChartLine,
   FaCogs,
   FaTools,
+  FaBeer,
 } from 'react-icons/fa';
 import { RxDashboard } from 'react-icons/rx';
 import { TbLayoutDashboardFilled } from 'react-icons/tb';
@@ -56,5 +57,39 @@ export const sidebarMenu = [
     title: 'Settings',
     icon: <FaCogs />,
     path: '/settings',
+  },
+
+  // Spacer item to create separation
+  {
+    title: '',
+    icon: null,
+    path: '',
+    isSpacer: true,
+  },
+
+  {
+    title: 'Login',
+    icon: <FaBeer />,
+    path: '/login',
+  },
+  {
+    title: 'Signup',
+    icon: <FaBeer />,
+    path: '/signup',
+  },
+  {
+    title: 'Server Setup',
+    icon: <FaBeer />,
+    path: '/setup/server',
+  },
+  {
+    title: 'Assessment',
+    icon: <FaBeer />,
+    path: '/setup/assessment',
+  },
+  {
+    title: 'Traffic Usage',
+    icon: <FaBeer />,
+    path: '/setup/traffic-usage',
   },
 ];
