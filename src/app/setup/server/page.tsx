@@ -133,7 +133,7 @@ const Server = () => {
       </div>
 
       {/* part2 */}
-      <div className="basis-1/4  pl-3 ">
+      <div className="basis-1/4  pl-10 ">
         <div className="flex justify-end mt-18">
           <Image src={logo} alt="everything green"></Image>
         </div>

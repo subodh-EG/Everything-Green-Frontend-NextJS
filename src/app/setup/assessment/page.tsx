@@ -7,11 +7,20 @@ import Select from 'react-select';
 import Image from 'next/image';
 import { FaChevronDown } from 'react-icons/fa';
 import { customStyles } from '@/utils/CustomSelect';
+
 const Assessment = () => {
-  const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
+  const cmsOptions = [
+    { value: 'Wordpress', label: 'Wordpress' },
+    { value: 'Strapi', label: 'Strapi' },
+    { value: 'Drupal', label: 'Drupal' },
+  ];
+
+  const bandwidthOptions = [
+    { value: '0-10GB', label: '0-10GB' },
+    { value: '10-50GB', label: '10-50GB' },
+    { value: '50-100GB', label: '50-100GB' },
+    { value: '100-500GB', label: '100-500GB' },
+    { value: '500GB+', label: '500GB+' },
   ];
 
   const marketCapOptions = [
@@ -67,7 +76,7 @@ const Assessment = () => {
               CMS*
             </label>
             <Select
-              options={options}
+              options={cmsOptions}
               className="mt-3 "
               placeholder="Select the CMS you are using"
               styles={customStyles}
@@ -78,9 +87,9 @@ const Assessment = () => {
               Bandwidth*
             </label>
             <Select
-              options={options}
+              options={bandwidthOptions}
               className="mt-3"
-              placeholder="Select the CMS you are using"
+              placeholder="Bandwidth your website uses per month"
               styles={customStyles}
             />
           </div>
@@ -102,12 +111,12 @@ const Assessment = () => {
             <Select
               options={industryOptions}
               className="mt-3"
-              placeholder="Select your Cap"
+              placeholder="Select your Industry"
               styles={customStyles}
             />
           </div>
 
-          <div className="flex items-center gap-12 justify-end mt-5 ">
+          <div className="flex pb-12 items-center gap-12 justify-end mt-5 ">
             <p className="text-dark-400 font-medium cursor-pointer"> Back</p>
             <button className="font-medium px-10 py-3 bg-primary-500 cursor-pointer text-white rounded-md">
               Continue
@@ -117,7 +126,7 @@ const Assessment = () => {
       </div>
 
       {/* part 2 */}
-      <div className="basis-1/4  pl-3 ">
+      <div className="basis-1/4  pl-10 ">
         <div className="flex justify-end mt-18">
           <Image src={logo} alt="everything green"></Image>
         </div>

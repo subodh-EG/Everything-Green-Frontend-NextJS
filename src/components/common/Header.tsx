@@ -17,14 +17,14 @@ const Header = ({ title }: IHeader) => {
 
         <div className="flex  gap-6  items-center">
           <button
-            className="flex px-5 py-4 items-center gap-1
+            className="flex px-5 py-4 items-center gap-1 max-h-12
          cursor-pointer text-primary-500 border border-primary-500 rounded-md text-lg font-medium bg-white"
           >
             <FaRegFileAlt />
             Regenerate Report
           </button>
           <button
-            className="flex px-5 py-4 items-center gap-1
+            className="flex px-5 py-4 items-center gap-1 max-h-12
          cursor-pointer text-white bg-primary-500 border border-primary-500 rounded-md text-lg font-medium"
           >
             {' '}
