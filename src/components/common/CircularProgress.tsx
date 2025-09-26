@@ -4,7 +4,8 @@ import React from 'react';
 
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-const CircularProgess = () => {
+
+const CircularProgress = () => {
   return (
     <div className="h-40 w-40">
       <CircularProgressbar
@@ -22,4 +23,4 @@ const CircularProgess = () => {
   );
 };
 
-export default CircularProgess;
+export default CircularProgress;

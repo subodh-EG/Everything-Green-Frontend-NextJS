@@ -31,8 +31,8 @@ export const sidebarMenu = [
     title: 'Insights',
     icon: <FaChartBar />,
     children: [
-      { title: 'Table Data', path: '/insights/table-data' },
-      { title: 'Page Insights', path: '/insights/page-insights' },
+      { title: 'Table Data', path: '/dashboard/insights/table-data' },
+      { title: 'Page Insights', path: '/dashboard/insights/page-insights' },
     ],
   },
   {
