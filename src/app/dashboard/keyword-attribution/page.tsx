@@ -1,52 +1,48 @@
-"use client";
-import HeatBar from "@/components/common/HeatBar";
-import DashboardLayout from "@/components/dashboard/DashboardLayout";
-import DateSelect from "@/components/dashboard/home/DateSelect";
-import React, { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
+'use client';
+import HeatBar from '@/components/common/HeatBar';
+import DashboardLayout from '@/components/dashboard/DashboardLayout';
+import DateSelect from '@/components/dashboard/home/DateSelect';
+import React, { useEffect, useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
 
 const KeywordAttribution = () => {
   const [attribution, setAttribution] = useState(1);
-  const tableRow = ["Keyword ", "Conversion Rate", "Emissions"];
+  const tableRow = ['Keyword ', 'Conversion Rate', 'Emissions'];
+  const [keywordAttributionData, setKeywordAttributionData] = useState<any>([]);
 
-  const tableData = [
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
+  const fetchKeywordAttribution = async () => {
+    const response = await fetch(
+      'https://api-dev.everythinggreen.org/attribution/calculate',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          startDate: '90daysAgo',
+          endDate: 'today',
+          locationCode: '2166',
+          limit: 3,
+          websiteId: '685d4e66baaac54e789468a1',
+        }),
+      },
+    );
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  };
 
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-    {
-      keyword: "eco shoes",
-      conversionRate: "0.3%",
-      emissions: "12.0 kg",
-    },
-  ];
+  useEffect(() => {
+    console.log('fetching keyword attribution data');
+    fetchKeywordAttribution().then((data) => {
+      console.log({ data });
+      setKeywordAttributionData(data);
+    });
+  }, []);
+
+  console.log({ keywordAttributionData });
+
   return (
     <DashboardLayout>
       <DateSelect />
@@ -72,8 +68,8 @@ const KeywordAttribution = () => {
             <div
               className={`px-4 py-3 cursor-pointer border-t-2  ${
                 attribution == 1
-                  ? " border-primary-500  bg-gradient-to-b from-[#c2e3da] to-white"
-                  : "border-[#D9D9D9]"
+                  ? ' border-primary-500  bg-gradient-to-b from-[#c2e3da] to-white'
+                  : 'border-[#D9D9D9]'
               }`}
               onClick={() => setAttribution(1)}
             >
@@ -82,8 +78,8 @@ const KeywordAttribution = () => {
             <div
               className={`px-4 py-3 cursor-pointer border-t-2  ${
                 attribution == 2
-                  ? " border-primary-500  bg-gradient-to-b from-[#c2e3da] to-white"
-                  : "border-[#D9D9D9]"
+                  ? ' border-primary-500  bg-gradient-to-b from-[#c2e3da] to-white'
+                  : 'border-[#D9D9D9]'
               }`}
               onClick={() => setAttribution(2)}
             >
@@ -113,7 +109,7 @@ const KeywordAttribution = () => {
           <h3 className="text-2xl font-bold">LP Preview (moved):</h3>
           <div className="mt-5 flex flex-col gap-3">
             <p>
-              Page load time (seconds):{" "}
+              Page load time (seconds):{' '}
               <span className="text-primary-500">2.1</span>
             </p>
             <p>
@@ -153,19 +149,21 @@ const KeywordAttribution = () => {
               </tr>
             </thead>
             <tbody>
-              {tableData.map((data) => (
-                <tr key={data.keyword} className="text-sm">
-                  <td className="py-2 px-4 border-t border-gray-200">
-                    {data.conversionRate}
-                  </td>
-                  <td className="py-2 px-4 border-t border-gray-200">
-                    {data.emissions}
-                  </td>
-                  <td className="py-2 px-4 border-t border-gray-200">
-                    {data.keyword}
-                  </td>
-                </tr>
-              ))}
+              {keywordAttributionData?.historicalKeywordValues?.map(
+                (data: any) => (
+                  <tr key={data.keyword} className="text-sm">
+                    <td className="py-2 px-4 border-t border-gray-200">
+                      {data.conversionRate || 0}
+                    </td>
+                    <td className="py-2 px-4 border-t border-gray-200">
+                      {data.emissions || 0}
+                    </td>
+                    <td className="py-2 px-4 border-t border-gray-200">
+                      {data.keyword || ''}
+                    </td>
+                  </tr>
+                ),
+              )}
             </tbody>
           </table>
         </div>
